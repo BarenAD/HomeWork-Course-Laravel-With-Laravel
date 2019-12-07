@@ -2,17 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Facades\BasicServiceFacade;
 use Illuminate\Http\Request;
 use App\Services\BasicService;
 
 class TestController extends Controller
 {
-    private $BasicService;
-
-    function __construct(BasicService $BS)
-    {
-        $this->BasicService = $BS;
-    }
 
     public function getOne()
     {
