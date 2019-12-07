@@ -34,4 +34,17 @@ class Test extends Model
         }
         return $Row->attributes;
     }
+
+    public static function find_by_text($in_text)
+    {
+        $Collection = Test::where('text', 'like', '%'.$in_text.'%')->get();
+        if (count($Collection) > 0){
+            $ResultCollection = array();
+            foreach($Collection as $item){
+                $ResultCollection[] = $item->attributes;
+            }
+            return $ResultCollection;
+        }
+        return null;
+    }
 }
