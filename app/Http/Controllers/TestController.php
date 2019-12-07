@@ -8,6 +8,12 @@ use App\Services\BasicService;
 
 class TestController extends Controller
 {
+    private $BasicService;
+
+    function __construct()
+    {
+        $this->BasicService = BasicServiceFacade::getFacadeRoot();
+    }
 
     public function getOne()
     {
