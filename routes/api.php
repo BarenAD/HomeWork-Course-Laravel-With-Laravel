@@ -28,6 +28,7 @@ Route::middleware('check-api')->group(function ()
 
         Route::prefix('table')->group(function () {
             Route::get('/get-by-id/{id}', 'MegaController@get_test_by_id');
+            Route::get('/get-by-text/{text}', 'MegaController@get_test_by_text');
         });
     });
 });

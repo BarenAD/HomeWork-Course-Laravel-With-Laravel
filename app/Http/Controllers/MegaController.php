@@ -11,4 +11,9 @@ class MegaController extends Controller
     {
         return response()->json(Test::find_by_id($in_id));
     }
+
+    public function get_test_by_text($in_text)
+    {
+        return response()->json(Test::find_by_text($in_text));
+    }
 }
