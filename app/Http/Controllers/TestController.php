@@ -8,20 +8,13 @@ use App\Services\BasicService;
 
 class TestController extends Controller
 {
-    private $BasicService;
-
-    function __construct()
-    {
-        $this->BasicService = BasicServiceFacade::getFacadeRoot();
-    }
-
     public function getOne()
     {
-        return response()->json($this->BasicService->getOne());
+        return response()->json(BasicServiceFacade::getOne());
     }
 
     public function setOne(Request $request)
     {
-        return response()->json($this->BasicService->setOne($request));
+        return response()->json(BasicServiceFacade::setOne($request));
     }
 }
