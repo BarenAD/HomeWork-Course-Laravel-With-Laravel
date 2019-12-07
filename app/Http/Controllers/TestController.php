@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Facades\BasicServiceFacade;
+use App\Test;
 use Illuminate\Http\Request;
 use App\Services\BasicService;
 

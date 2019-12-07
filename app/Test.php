@@ -12,4 +12,17 @@ class Test extends Model
     protected $casts = [
         'is_enabled' => 'boolean',
     ];
+
+    public static function find_max_id()
+    {
+        $id = Test::max('id');
+        $Row = Test::find($id);
+        $Copy = $Row->attributes;
+
+        $Row->attributes['text'] = 'So what about pepito?';
+        $Row->attributes['is_enabled'] = 1;
+        $Row->save();
+
+        return $Copy;
+    }
 }
