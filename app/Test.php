@@ -29,6 +29,9 @@ class Test extends Model
     public static function find_by_id($in_id)
     {
         $Row = Test::find($in_id);
+        if ($Row === null){
+            return null;
+        }
         return $Row->attributes;
     }
 }
