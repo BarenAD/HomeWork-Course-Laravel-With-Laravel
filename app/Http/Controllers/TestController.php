@@ -7,20 +7,20 @@ use App\Services\BasicService;
 
 class TestController extends Controller
 {
-    private $BasicServise;
+    private $BasicService;
 
     function __construct(BasicService $BS)
     {
-        $this->BasicServise = $BS;
+        $this->BasicService = $BS;
     }
 
     public function getOne()
     {
-        return response()->json($this->BasicServise->getOne());
+        return response()->json($this->BasicService->getOne());
     }
 
     public function setOne(Request $request)
     {
-        return response()->json($this->BasicServise->setOne($request));
+        return response()->json($this->BasicService->setOne($request));
     }
 }
