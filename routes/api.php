@@ -25,5 +25,9 @@ Route::middleware('check-api')->group(function ()
     Route::prefix('test')->group(function () {
         Route::get('/one', 'TestController@getOne');
         Route::post('/one', 'TestController@setOne');
+
+        Route::prefix('table')->group(function () {
+            Route::get('/get-by-id/{id}', 'MegaController@get_test_by_id');
+        });
     });
 });
