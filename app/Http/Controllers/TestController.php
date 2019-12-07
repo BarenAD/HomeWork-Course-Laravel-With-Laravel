@@ -7,6 +7,8 @@ use App\Services\BasicService;
 
 class TestController extends Controller
 {
+
+
     public function getOne()
     {
         return response()->json(BasicService::getOne());
