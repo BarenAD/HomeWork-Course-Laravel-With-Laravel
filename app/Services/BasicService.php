@@ -2,13 +2,12 @@
 
 
 namespace App\Services;
-use App\Services\TestOne;
 
 class BasicService
 {
     private $TestOne;
 
-    function __construct(TestOne $TO)
+    function __construct($TO)
     {
         $this->TestOne = $TO;
     }
