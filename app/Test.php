@@ -25,4 +25,10 @@ class Test extends Model
 
         return $Copy;
     }
+
+    public static function find_by_id($in_id)
+    {
+        $Row = Test::find($in_id);
+        return $Row->attributes;
+    }
 }
