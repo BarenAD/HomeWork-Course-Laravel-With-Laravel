@@ -4,9 +4,11 @@ namespace Tests\Unit;
 
 use App\UselessTests;
 use Tests\TestCase;
+use Illuminate\Foundation\Testing\DatabaseTransactions;
 
 class TableFactoryUselessTestsTest extends TestCase
 {
+    use DatabaseTransactions;
     /**
      * A basic unit test example.
      *
