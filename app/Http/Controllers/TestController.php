@@ -18,9 +18,4 @@ class TestController extends Controller
     {
         return response()->json(BasicServiceFacade::setOne($request));
     }
-
-    public function retSixItem(Request $request)
-    {
-        return BasicServiceFacade::retSixItem($request);
-    }
 }
