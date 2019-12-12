@@ -11,3 +11,10 @@
 |
 */
 
+Route::get('/', function () {
+    return view('welcome');
+});
+
+Route::get('/test', function () {
+    return response()->json("my first test", 200);
+});
